@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: black;
+  /* this will apply background gradient to body */
+  background-image: linear-gradient(to top left, violet 0%, red 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+
+/* common class to both the players the area distributed in half */
+/* transition all will apply animation to all element for specified time */
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+/* applies to player font */
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 400;
+  color: red;
+  margin-bottom: auto;
+}
+
+/* this will make the active player slight red in dark with combination of background gradient */
+.player-active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* will show the score of current [player] */
+.current {
+  background-color: #cf2354;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: white;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+/* label of current score button */
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+/* this is the current score */
+.current-score {
+  font-size: 3.5rem;
+}
+
+/* all the button align to center of main */
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50px;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+/* this all apply on emoji added on button   */
+.btn::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
+.btn-new {
+  top: 4rem;
+}
+.btn-roll {
+  top: 39.3rem;
+}
+.btn-hold {
+  top: 46.1rem;
+}
+
+/* .btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btn:focus {
+  outline: none;
+} */
+
+/* this applies to dice block  */
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translate(-50%);
+  height: 10rem;
+  border-radius: 10px;
+}
+
+/* if player winner the then background color changes to yellow */
+.player-winner {
+  background-color: rgb(237, 237, 14);
+}
+.player-winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+.hidden {
+  display: none;
+}

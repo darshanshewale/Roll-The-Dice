@@ -1,0 +1,19 @@
+{
+  "name": "roll_the_dice",
+  "version": "1.0.0",
+  "description": "roll_the_dice_game",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Darshan",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "core-js": "^3.36.0",
+    "core.js": "^0.4.2"
+  }
+}
